@@ -1,0 +1,64 @@
+header {
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 5px -5px 10px #404040;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 95px;
+}
+
+.logo-and-menu-container {
+    align-items: center;
+    display: flex;
+}
+
+.logo-container {
+    margin-right: 30px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-item:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+.menu-item > a {
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    transition-property: color;
+    text-decoration: none;
+}
+
+.menu-item > a:hover {
+    color: #A63FA6;
+}
+
+.menu-item-active > a {
+    color: #862D86;
+    transition-duration: 0.5s;
+    transition-property: color;
+}
+
+.highlighted-button {
+    background-color: #862D86;
+    border: none;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    transition-property: background-color;
+}
+
+.highlighted-button:hover {
+    background-color: #993399;
+    transition-duration: 0.5s;
+    transition-property: background-color;
+}

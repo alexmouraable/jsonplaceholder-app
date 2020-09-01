@@ -1,0 +1,27 @@
+footer {
+    align-items: center;
+    background-color: #404040;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding-right: 95px;
+    padding-left: 95px;
+}
+
+.container-tool-images {
+    display: flex;
+}
+
+.tool-image-container:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+.tool-image {
+    width: 36px;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 0px;
+}

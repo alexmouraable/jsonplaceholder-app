@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main-title {
+    color: #862D86;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
