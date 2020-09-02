@@ -1,3 +1,26 @@
-<p>
-  list-posts works!
-</p>
+<div>
+  <ng-container *ngFor="let post of sliceOfPosts.values">
+    <div class="post-container">
+      <div class="post">
+        <div class="post-title-container">
+          <a class="post-title" href="#">
+            {{ post.title }}
+          </a>
+        </div>
+        <div class="post-content-container">
+          <p class="post-content">
+            {{ post.body }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<ng-container *ngIf="sliceOfPosts.totalValues < sliceOfPosts.totalCount">
+  <div class="button-container-show-more">
+    <button class="button-show-more" (click)="loadPosts(sliceOfPosts.nextFinalPosition)">
+      Ver Mais
+    </button>
+  </div>
+</ng-container>

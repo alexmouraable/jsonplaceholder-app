@@ -40,8 +40,6 @@ header {
 
 .menu-item-active > a {
     color: #862D86;
-    transition-duration: 0.5s;
-    transition-property: color;
 }
 
 .highlighted-button {
