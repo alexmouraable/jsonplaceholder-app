@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ListPostsComponent } from './components/list-posts/list-posts.component';
-import { PostsComponent } from './posts.component';
 import { PostsResolver } from './guards/posts-resolver';
+import { ListPostsContainerComponent } from './components/list-posts-container/list-posts-container.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: PostsComponent,
+        component: ListPostsContainerComponent,
         resolve: {
             sliceOfPosts: PostsResolver
         }

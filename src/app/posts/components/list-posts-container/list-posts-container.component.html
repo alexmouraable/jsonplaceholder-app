@@ -1,0 +1,5 @@
+<div class="main-title-container">
+  <h1 class="main-title">Postagens</h1>
+</div>
+
+<app-list-posts [slice-of-posts]="sliceOfPosts" (load-slice-of-posts)="loadSliceOfPosts($event)"></app-list-posts>
