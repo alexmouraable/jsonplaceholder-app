@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
     {
         path: 'postagens',
-        loadChildren: './posts/posts.module#PostsModule'
+        loadChildren: './modules/posts/posts.module#PostsModule'
     }
 ];
 

@@ -3,9 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 
 import { take } from 'rxjs/operators';
 
-import { Slice } from 'src/app/shared/models/slice.model';
-import { Post } from '../../models/post.model';
-import { PostService } from '../../services/post.service';
+import { Slice } from 'src/app/data/models/slice.model';
+import { Post } from '../../../../data/models/post.model';
+import { PostService } from '../../../../data/services/post.service';
 
 @Component({
   selector: 'app-list-posts-container',

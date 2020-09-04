@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PostsResolver } from './guards/posts-resolver';
 import { ListPostsContainerComponent } from './components/list-posts-container/list-posts-container.component';
+import { ViewPostComponent } from './components/view-post/view-post.component';
 
 const routes: Routes = [
     {
@@ -11,6 +12,10 @@ const routes: Routes = [
         resolve: {
             sliceOfPosts: PostsResolver
         }
+    },
+    {
+        path: ':id',
+        component: ViewPostComponent
     }
 ];
 

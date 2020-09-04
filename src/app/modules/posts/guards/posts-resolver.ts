@@ -1,9 +1,11 @@
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { Post } from '../models/post.model';
-import { PostService } from '../services/post.service';
-import { Observable } from 'rxjs';
+import { Resolve } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { Slice } from 'src/app/shared/models/slice.model';
+
+import { Observable } from 'rxjs';
+
+import { Post } from '../../../data/models/post.model';
+import { PostService } from '../../../data/services/post.service';
+import { Slice } from 'src/app/data/models/slice.model';
 
 @Injectable({
     providedIn: "root"

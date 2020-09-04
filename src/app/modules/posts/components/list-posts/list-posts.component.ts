@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { Post } from '../../models/post.model';
-import { Slice } from 'src/app/shared/models/slice.model';
+import { Post } from '../../../../data/models/post.model';
+import { Slice } from 'src/app/data/models/slice.model';
 
 @Component({
   selector: 'app-list-posts',
