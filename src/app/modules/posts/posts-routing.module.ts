@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostsResolver } from './guards/posts-resolver';
 import { ListPostsContainerComponent } from './components/list-posts-container/list-posts-container.component';
 import { ViewPostComponent } from './components/view-post/view-post.component';
+import { PostResolver } from './guards/post-resolver';
 
 const routes: Routes = [
     {
@@ -15,7 +16,10 @@ const routes: Routes = [
     },
     {
         path: ':id',
-        component: ViewPostComponent
+        component: ViewPostComponent,
+        resolve: {
+            post: PostResolver
+        }
     }
 ];
 

@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: #404040;
 }
 
 .main-title {
@@ -10,4 +11,16 @@
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.secondary-title {
+    color: #404040;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.standard-text {
+    font-size: 14px;
+    color: #404040;
 }

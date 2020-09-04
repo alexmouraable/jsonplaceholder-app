@@ -1,0 +1,18 @@
+<div class="reading-box">
+  <div class="title-container">
+    <ng-container *ngIf="title; else titleTemplate">
+      <p class="title">
+        {{ title }}
+      </p>
+    </ng-container>
+  </div>
+  <div class="information-container">
+    <p class="information">
+      {{ information }}
+    </p>
+  </div>
+</div>
+
+<ng-template #titleTemplate>
+  <ng-content></ng-content>
+</ng-template>

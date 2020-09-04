@@ -1,3 +1,72 @@
-<p>
-  view-post works!
-</p>
+<div class="main-title-container">
+  <h1 class="main-title">
+    Visualizar Postagem
+  </h1>
+</div>
+
+<div class="topic-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">
+      Usuário
+    </h2>
+  </div>
+
+  <div class="information-box-container-with-icon">
+    <app-information-box-with-icon
+      icon-path="../../../../../assets/images/icons/user.svg"
+      [information]="post.user.name"></app-information-box-with-icon>
+  </div>
+
+  <div class="information-box-container-with-icon">
+    <app-information-box-with-icon
+      icon-path="../../../../../assets/images/icons/mail.svg"
+      [information]="post.user.email"></app-information-box-with-icon>
+  </div>
+
+  <div class="information-box-container-with-icon">
+    <app-information-box-with-icon
+      icon-path="../../../../../assets/images/icons/phone.svg"
+      [information]="post.user.phone"></app-information-box-with-icon>
+  </div>
+</div>
+
+<div class="topic-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">
+      Título
+    </h2>
+  </div>
+  <div>
+    <p class="standard-text">
+      {{ post.title }}
+    </p>
+  </div>
+</div>
+
+<div class="topic-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">
+      Conteúdo
+    </h2>
+  </div>
+  <div>
+    <p class="standard-text">
+      {{ post.body }}
+    </p>
+  </div>
+</div>
+
+<div class="topic-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">
+      Comentários
+    </h2>
+  </div>
+  <div>
+    <ng-container *ngFor="let comment of post?.comments">
+      <div class="comment-container">
+        <app-reading-box [title]="comment.email" [information]="comment.body"></app-reading-box>
+      </div>
+    </ng-container>
+  </div>
+</div>
