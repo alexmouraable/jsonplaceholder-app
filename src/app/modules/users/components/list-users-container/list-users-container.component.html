@@ -1,0 +1,13 @@
+<div class="main-title-container">
+  <h1 class="main-title">Usuários</h1>
+</div>
+
+<app-list-users [users]="sliceOfUsers.values"></app-list-users>
+
+<ng-container *ngIf="haveMoreUsers()">
+  <div class="button-container-show-more">
+    <button class="button-show-more" type="button" (click)="loadSliceOfUsers()">
+      Ver Mais
+    </button>
+  </div>
+</ng-container>

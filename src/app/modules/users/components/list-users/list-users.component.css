@@ -1,0 +1,49 @@
+.main-title-container {
+    margin-bottom: 25px;
+}
+
+.user {
+    display: flex;
+}
+
+.name-initials-container {
+    align-items: center;
+    background-color: #B34DB3;
+    display: flex;
+    padding: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.name-initials {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.user-information-container {
+    padding: 10px 15px;
+}
+
+.username-container {
+    margin-bottom: 5px;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.user-email-container {
+    margin-bottom: 5px;
+}
+
+.user-container:not(:last-of-type) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.user-container:not(:first-of-type) {
+    margin-top: 20px;
+}
