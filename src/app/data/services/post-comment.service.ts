@@ -9,11 +9,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PostCommentService {
+  private readonly endpoints = {
+    getAll: (postId: number) => `${environment.apiRootUrl}/posts/${postId}/comments`
+  };
 
   constructor(private httpClient: HttpClient) { }
 
   getAll(postId: number): Observable<Comment[]> {
-    return this.httpClient.get<Comment[]>(`${environment.apiRootUrl}/posts/${postId}/comments`);
+    return this.httpClient.get<Comment[]>(this.endpoints.getAll(postId));
   }
-  
 }
