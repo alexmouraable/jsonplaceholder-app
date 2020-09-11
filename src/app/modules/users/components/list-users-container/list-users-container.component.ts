@@ -11,19 +11,22 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./list-users-container.component.css']
 })
 export class ListUsersContainerComponent implements OnInit {
-  sliceOfUsers: Slice<User[]>;
+  sliceOfUsers: Slice<User>;
+  users: User[];
 
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit() {
     this.sliceOfUsers = this.activatedRoute.snapshot.data.sliceOfUsers;
-  }
-
-  haveMoreUsers(): boolean {
-    return this.sliceOfUsers.totalValues < this.sliceOfUsers.totalCount;
+    this.users = this.sliceOfUsers.values;
   }
 
   loadSliceOfUsers(): void {
-    this.userService.getAll(this.sliceOfUsers.nextFinalPosition).pipe(take(1)).subscribe((sliceOfUsers: Slice<User[]>) => this.sliceOfUsers = sliceOfUsers);
+    const start: number = this.sliceOfUsers.getNextStart();
+    const end: number = this.sliceOfUsers.getNextEnd();
+    this.userService.getAll(start, end).pipe(take(1)).subscribe((sliceOfUsers: Slice<User>) => {
+      this.sliceOfUsers = sliceOfUsers;
+      this.users = this.users.concat(this.sliceOfUsers.values);
+    });
   }
 }

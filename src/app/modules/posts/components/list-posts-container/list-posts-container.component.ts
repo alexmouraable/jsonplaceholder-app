@@ -13,19 +13,26 @@ import { PostService } from '../../../../data/services/post.service';
   styleUrls: ['./list-posts-container.component.css']
 })
 export class ListPostsContainerComponent implements OnInit {
-  sliceOfPosts: Slice<Post[]>;
+  sliceOfPosts: Slice<Post>;
+  posts: Post[];
 
   constructor(private activatedRoute: ActivatedRoute, private postService: PostService) { }
 
   ngOnInit() {
     this.sliceOfPosts = this.getSliceOfPosts();
+    this.posts = this.sliceOfPosts.values;
   }
 
-  private getSliceOfPosts(): Slice<Post[]> {
+  private getSliceOfPosts(): Slice<Post> {
     return this.activatedRoute.snapshot.data.sliceOfPosts;
   }
 
-  loadSliceOfPosts(finalPosition: number): void {
-    this.postService.getAll(finalPosition).pipe(take(1)).subscribe((sliceOfPosts: Slice<Post[]>) => this.sliceOfPosts = sliceOfPosts);
+  loadSliceOfPosts(): void {
+    const start: number = this.sliceOfPosts.getNextStart();
+    const end: number = this.sliceOfPosts.getNextEnd();
+    this.postService.getAll(start, end).pipe(take(1)).subscribe((sliceOfPosts: Slice<Post>) => {
+      this.sliceOfPosts = sliceOfPosts;
+      this.posts = this.posts.concat(this.sliceOfPosts.values);
+    });
   }
 }

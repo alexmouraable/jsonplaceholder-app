@@ -10,12 +10,14 @@ import { User } from 'src/app/data/models/user.model';
 @Injectable({
     providedIn: "root"
 })
-export class UsersResolver implements Resolve<Slice<User[]>> {
+export class UsersResolver implements Resolve<Slice<User>> {
 
     constructor(private userService: UserService) { }
 
-    resolve(): Observable<Slice<User[]>> {
-        return this.userService.getAll(5);
+    resolve(): Observable<Slice<User>> {
+        const start: number = 0;
+        const end: number = 5;
+        return this.userService.getAll(start, end);
     }
 
 }

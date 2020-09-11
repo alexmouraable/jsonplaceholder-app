@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 
 import { Post } from '../models/post.model';
 import { environment } from 'src/environments/environment';
+import { Slice } from '../models/slice.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,29 +19,20 @@ export class PostService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAll(finalPosition: number): Observable<any> { 
+  getAll(start: number, end: number): Observable<Slice<Post>> { 
     const params = {
-      _end: finalPosition.toString()
+      _start: String(start),
+      _end: String(end)
     };
 
     const observe = 'response';
 
     return this.httpClient.get(this.endpoints.getAll(), { params, observe })
-    .pipe(
+      .pipe(
         map((httpResponse: HttpResponse<Post[]>) => {
           const totalCount: number = parseInt(httpResponse.headers.get('x-total-count'));
           const posts: Post[] = httpResponse.body;
-          const totalValues: number = posts.length;
-          const nextFinalPosition: number = (finalPosition < totalCount) ? finalPosition + 5 : undefined;
-          const lastFinalPosition: number = (finalPosition > 0) ? finalPosition - 5 : undefined;
-          
-          return {
-            totalCount,
-            totalValues,
-            values: posts,
-            nextFinalPosition,
-            lastFinalPosition
-          };
+          return new Slice<Post>(start, end, totalCount, posts);
         })
       )
   }

@@ -2,4 +2,12 @@
   <h1 class="main-title">Postagens</h1>
 </div>
 
-<app-list-posts [slice-of-posts]="sliceOfPosts" (load-slice-of-posts)="loadSliceOfPosts($event)"></app-list-posts>
+<app-list-posts [posts]="posts"></app-list-posts>
+
+<ng-container *ngIf="!sliceOfPosts.isLast()">
+  <div class="button-container-show-more">
+    <button class="button-show-more" type="button" (click)="loadSliceOfPosts()">
+      Ver Mais
+    </button>
+  </div>
+</ng-container>

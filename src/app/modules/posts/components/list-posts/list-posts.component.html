@@ -1,5 +1,5 @@
 <div>
-  <ng-container *ngFor="let post of sliceOfPosts.values">
+  <ng-container *ngFor="let post of posts">
     <div class="post-container">
       <app-reading-box [information]="post.body">
         <a class="post-title" [routerLink]="post.id">
@@ -9,11 +9,3 @@
     </div>
   </ng-container>
 </div>
-
-<ng-container *ngIf="haveMorePosts()">
-  <div class="button-container-show-more">
-    <button class="button-show-more" (click)="loadPosts()">
-      Ver Mais
-    </button>
-  </div>
-</ng-container>
