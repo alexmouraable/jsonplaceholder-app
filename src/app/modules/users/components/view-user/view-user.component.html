@@ -1,3 +1,85 @@
+<!-- <Título Principal> -->
 <div class="main-title-container">
   <h1 class="main-title">Visualizar Usuário</h1>
 </div>
+<!-- </Título Principal> -->
+
+<!-- <Geral> -->
+<div class="section-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">Geral</h2>
+  </div>
+
+  <div class="information-container">
+    <app-reading-box title="Nome" [information]="user.name"></app-reading-box>
+    <app-reading-box title="Nome de Usuário" [information]="user.username"></app-reading-box>
+    <app-reading-box title="Website" [information]="user.website"></app-reading-box>
+  </div>
+</div>
+<!-- </Geral> -->
+
+<!-- <Endereço> -->
+<div class="section-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">Endereço</h2>
+  </div>
+
+  <div class="information-container">
+    <app-reading-box title="Rua" [information]="user.address.street"></app-reading-box>
+    <app-reading-box title="Cidade" [information]="user.address.city"></app-reading-box>
+    <app-reading-box title="CEP" [information]="user.address.zipcode"></app-reading-box>
+  </div>
+
+  <div class="information-container">
+    <app-reading-box title="Complemento" [information]="user.address.suite"></app-reading-box>
+    <app-reading-box title="Latitude" [information]="user.address.geo.lat"></app-reading-box>
+    <app-reading-box title="Longitude" [information]="user.address.geo.lng"></app-reading-box>
+  </div>
+</div>
+<!-- </Endereço> -->
+
+<!-- <Contatos> -->
+<div class="section-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">Contatos</h2>
+  </div>
+
+  <div class="information-container">
+    <app-reading-box title="Telefone" [information]="user.phone"></app-reading-box>
+    <app-reading-box title="E-mail" [information]="user.email"></app-reading-box>
+  </div>
+</div>
+<!-- </Contatos> -->
+
+<!-- <Empresa> -->
+<div class="section-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">Empresa</h2>
+  </div>
+
+  <div class="information-container">
+    <app-reading-box title="Nome" [information]="user.company.name"></app-reading-box>
+    <app-reading-box title="Bordão" [information]="user.company.catchPhrase"></app-reading-box>
+    <app-reading-box title="Finalidade" [information]="user.company.bs"></app-reading-box>
+  </div>
+</div>
+<!-- </Empresa> -->
+
+<!-- <Estatísticas> -->
+<div class="section-container">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">Estatísticas</h2>
+  </div>
+
+  <div class="information-container">
+    <app-count-box description="Postagens" [count]="user.statistics.numberOfPosts" [icon]="icons.posts"
+      button-description="Visualizar" route="../../postagens"></app-count-box>
+
+    <app-count-box description="Tarefas" [count]="user.statistics.numberOfTodos" [icon]="icons.tasks"
+      button-description="Visualizar" route="../../tarefas"></app-count-box>
+
+    <app-count-box description="Álbuns" [count]="user.statistics.numberOfAlbums" [icon]="icons.albums"
+      button-description="Visualizar" route="../../albuns"></app-count-box>
+  </div>
+</div>
+<!-- </Estatísticas> -->

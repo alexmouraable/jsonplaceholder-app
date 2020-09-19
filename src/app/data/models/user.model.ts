@@ -1,5 +1,6 @@
 import { Address } from './address.model';
 import { Company } from './company.model';
+import { Statistics } from './statistics.model';
 
 export interface User {
     id: number;
@@ -10,4 +11,5 @@ export interface User {
     phone: string;
     website: string;
     company: Company;
+    statistics: Statistics;
 }

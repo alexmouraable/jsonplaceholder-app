@@ -20,7 +20,7 @@ export class PostResolver implements Resolve<Post> {
     constructor(private postService: PostService, private userService: UserService, private postCommentService: PostCommentService) { }
 
     resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<Post> {
-        const postId: number = activatedRouteSnapshot.params.id;
+        const postId: number = activatedRouteSnapshot.params.postId;
 
         return this.postService.getById(postId).pipe(
             switchMap((foundPost: Post) => {

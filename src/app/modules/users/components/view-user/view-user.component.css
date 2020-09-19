@@ -1,3 +1,28 @@
 .main-title-container {
     margin-bottom: 25px;
 }
+
+.secondary-title-container {
+    margin-bottom: 10px;
+}
+
+.information-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -10px 0px 0px -10px;
+}
+
+.information-container > * {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin: 10px 0px 0px 10px;
+}
+
+.section-container:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.section-container > .information-container:not(:last-of-type) {
+    margin-bottom: 10px;
+}

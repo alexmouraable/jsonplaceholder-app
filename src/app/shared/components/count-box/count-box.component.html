@@ -1,0 +1,27 @@
+<div class="count-box">
+  <div class="count-description-icon-container">
+    <div>
+      <div class="count-container">
+        <span class="count">
+          {{ count }}
+        </span>
+      </div>
+
+      <div class="description-container">
+        <span class="description">
+          {{ description }}
+        </span>
+      </div>
+    </div>
+
+    <div class="icon-container">
+      <fa-icon [icon]="icon" size="2x"></fa-icon>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <a class="button" [routerLink]="route">
+      {{ buttonDescription }}
+    </a>
+  </div>
+</div>

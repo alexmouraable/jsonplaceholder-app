@@ -14,7 +14,7 @@ import { Slice } from '../models/slice.model';
 export class PostService {
   private readonly endpoints = {
     getAll: () => `${environment.apiRootUrl}/posts`,
-    getById: (id: number) => `${environment.apiRootUrl}/posts/${id}`
+    getById: (postId: number) => `${environment.apiRootUrl}/posts/${postId}`
   };
 
   constructor(private httpClient: HttpClient) { }
@@ -37,7 +37,7 @@ export class PostService {
       )
   }
 
-  getById(id: number): Observable<Post> {
-    return this.httpClient.get<Post>(this.endpoints.getById(id));
+  getById(postId: number): Observable<Post> {
+    return this.httpClient.get<Post>(this.endpoints.getById(postId));
   }
 }

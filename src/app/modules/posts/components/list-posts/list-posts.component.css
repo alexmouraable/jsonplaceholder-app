@@ -20,6 +20,7 @@
     color: #A63FA6;
     transition-property: color;
     transition-duration: 0.5s;
+    text-decoration: underline;
 }
 
 .post-content {

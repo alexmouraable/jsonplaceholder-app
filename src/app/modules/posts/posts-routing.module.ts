@@ -15,7 +15,7 @@ const routes: Routes = [
         }
     },
     {
-        path: ':id',
+        path: ':postId',
         component: ViewPostComponent,
         resolve: {
             post: PostResolver

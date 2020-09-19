@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { User } from '../models/user.model';
 import { environment } from 'src/environments/environment';
 import { Slice } from '../models/slice.model';
+import { Statistics } from '../models/statistics.model';
+import { UserPostService } from './user-post.service';
+import { UserTodoService } from './user-todo.service';
+import { UserAlbumService } from './user-album.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +18,15 @@ import { Slice } from '../models/slice.model';
 export class UserService {
   private readonly endpoints = {
     getAll: () => `${environment.apiRootUrl}/users` ,
-    getById: (id: number) => `${environment.apiRootUrl}/users/${id}`
+    getById: (userId: number) => `${environment.apiRootUrl}/users/${userId}`
   };
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private httpClient: HttpClient,
+    private userPostService: UserPostService,
+    private userTodoService: UserTodoService,
+    private userAlbumService: UserAlbumService
+  ) { }
 
   getAll(start: number, end: number): Observable<Slice<User>> {
     const params = {
@@ -37,7 +46,23 @@ export class UserService {
       );
   }
 
-  getById(id: number): Observable<User> {
-    return this.httpClient.get<User>(this.endpoints.getById(id));
+  getById(userId: number): Observable<User> {
+    return this.httpClient.get<User>(this.endpoints.getById(userId));
+  }
+
+  getStatistics(userId: number): Observable<Statistics> {
+    return forkJoin({
+      numberOfPosts: this.userPostService.count(userId),
+      numberOfTodos:  this.userTodoService.count(userId),
+      numberOfAlbums: this.userAlbumService.count(userId)
+    }).pipe(
+      map(numbers => {
+        return {
+          numberOfPosts: numbers.numberOfPosts,
+          numberOfTodos: numbers.numberOfTodos,
+          numberOfAlbums: numbers.numberOfAlbums
+        }
+      })
+    );
   }
 }
