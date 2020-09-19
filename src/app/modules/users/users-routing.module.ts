@@ -5,6 +5,8 @@ import { UsersResolver } from './guards/users-resolver';
 import { UserResolver } from './guards/user-resolver';
 import { ListUsersContainerComponent } from './components/list-users-container/list-users-container.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
+import { UserPostsResolver } from './guards/user-posts-resolver';
+import { ListUserPostsComponent } from './components/list-user-posts/list-user-posts.component';
 
 const routes: Routes = [
     {
@@ -19,6 +21,13 @@ const routes: Routes = [
         component: ViewUserComponent,
         resolve: {
             user: UserResolver
+        }
+    },
+    {
+        path: ':userId/postagens',
+        component: ListUserPostsComponent,
+        resolve: {
+            userAndSliceOfPosts: UserPostsResolver
         }
     }
 ];

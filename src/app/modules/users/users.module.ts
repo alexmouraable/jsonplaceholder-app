@@ -8,12 +8,14 @@ import { UsersRoutingModule } from './users-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ListUsersContainerComponent } from './components/list-users-container/list-users-container.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
+import { ListUserPostsComponent } from './components/list-user-posts/list-user-posts.component';
 
 @NgModule({
   declarations: [
     ListUsersComponent,
     ListUsersContainerComponent,
-    ViewUserComponent
+    ViewUserComponent,
+    ListUserPostsComponent
   ],
   imports: [
     CommonModule,

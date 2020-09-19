@@ -1,0 +1,51 @@
+.record-container:not(:last-of-type) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.record-container:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+.record-name {
+    color: #404040;
+    font-size: 14px;
+    font-weight: bold;
+    transition-property: color;
+    transition-duration: 0.5s;
+    text-decoration: none;
+}
+
+.record-name:hover {
+    color: #A63FA6;
+    transition-property: color;
+    transition-duration: 0.5s;
+    text-decoration: underline;
+}
+
+.button-view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.button-view-more {
+    border: 1px solid #862D86;
+    padding: 15px 60px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+.button-view-more:hover {
+    background-color: #862D86;
+    color: #FFFFFF;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}

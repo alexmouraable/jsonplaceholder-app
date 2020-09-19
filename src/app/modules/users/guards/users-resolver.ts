@@ -8,7 +8,7 @@ import { UserService } from 'src/app/data/services/user.service';
 import { User } from 'src/app/data/models/user.model';
 
 @Injectable({
-    providedIn: "root"
+    providedIn: 'root'
 })
 export class UsersResolver implements Resolve<Slice<User>> {
 
