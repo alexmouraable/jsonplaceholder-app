@@ -1,0 +1,7 @@
+<div class="main-title-container">
+  <h1 class="main-title">Postagens</h1>
+</div>
+
+<app-list-records [records]="records" [lazyLoading]="true"
+    (onLoadRecords)="loadRecords()"
+    [hideButtonViewMoreWhen]="sliceOfPosts.isLast()"></app-list-records>
