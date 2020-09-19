@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-information-box-with-icon',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class InformationBoxWithIconComponent {
   @Input() information: any;
-  @Input('icon-path') iconPath: string;
+  @Input() icon: IconDefinition;
 }

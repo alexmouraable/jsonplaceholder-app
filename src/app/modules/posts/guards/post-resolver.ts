@@ -9,6 +9,7 @@ import { PostService } from '../../../data/services/post.service';
 import { UserService } from 'src/app/data/services/user.service';
 import { User } from 'src/app/data/models/user.model';
 import { PostCommentService } from 'src/app/data/services/post-comment.service';
+import { Comment } from 'src/app/data/models/comment.model';
 
 @Injectable({
     providedIn: "root"

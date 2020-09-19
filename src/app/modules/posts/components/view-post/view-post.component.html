@@ -13,19 +13,19 @@
 
   <div class="information-box-container-with-icon">
     <app-information-box-with-icon
-      icon-path="../../../../../assets/images/icons/user.svg"
+      [icon]="icons.user"
       [information]="post.user.name"></app-information-box-with-icon>
   </div>
 
   <div class="information-box-container-with-icon">
     <app-information-box-with-icon
-      icon-path="../../../../../assets/images/icons/mail.svg"
+      [icon]="icons.email"
       [information]="post.user.email"></app-information-box-with-icon>
   </div>
 
   <div class="information-box-container-with-icon">
     <app-information-box-with-icon
-      icon-path="../../../../../assets/images/icons/phone.svg"
+      [icon]="icons.phone"
       [information]="post.user.phone"></app-information-box-with-icon>
   </div>
 </div>

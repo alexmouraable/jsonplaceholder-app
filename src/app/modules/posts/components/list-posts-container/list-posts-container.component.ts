@@ -33,6 +33,7 @@ export class ListPostsContainerComponent implements OnInit {
     this.postService.getAll(start, end).pipe(take(1)).subscribe((sliceOfPosts: Slice<Post>) => {
       this.sliceOfPosts = sliceOfPosts;
       this.posts = this.posts.concat(this.sliceOfPosts.values);
+      //this.sliceOfPosts.values.forEach(post => this.posts.push(post));
     });
   }
 }

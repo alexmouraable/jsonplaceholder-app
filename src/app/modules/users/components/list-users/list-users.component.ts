@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { faMailBulk, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { User } from 'src/app/data/models/user.model';
 
@@ -9,6 +10,10 @@ import { User } from 'src/app/data/models/user.model';
 })
 export class ListUsersComponent {
   @Input() users: User[];
+  readonly icons = {
+    email: faMailBulk,
+    phone: faPhone
+  };
 
   constructor() { }
 }

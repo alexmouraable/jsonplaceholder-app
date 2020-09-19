@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { User } from 'src/app/data/models/user.model';
 
 import { faTasks, faPhotoVideo, faEdit } from '@fortawesome/free-solid-svg-icons';

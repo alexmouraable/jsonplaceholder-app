@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
+import { Comment } from '../models/comment.model';
 
 @Injectable({
   providedIn: 'root'
