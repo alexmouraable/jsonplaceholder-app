@@ -10,6 +10,7 @@ import { DefaultBoxDirective } from './directives/default-box.directive';
 import { NameInitialsPipe } from './pipes/name-initials.pipe';
 import { CountBoxComponent } from './components/count-box/count-box.component';
 import { ListRecordsComponent } from './components/list-records/list-records.component';
+import { LabelComponent } from './components/label/label.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ListRecordsComponent } from './components/list-records/list-records.com
     DefaultBoxDirective,
     NameInitialsPipe,
     CountBoxComponent,
-    ListRecordsComponent
+    ListRecordsComponent,
+    LabelComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { ListRecordsComponent } from './components/list-records/list-records.com
     CountBoxComponent,
     FontAwesomeModule,
     RouterModule,
-    ListRecordsComponent
+    ListRecordsComponent,
+    LabelComponent
   ]
 })
 export class SharedModule { }
