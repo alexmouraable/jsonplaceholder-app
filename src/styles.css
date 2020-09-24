@@ -36,12 +36,14 @@
 
 /* Início - Link */
 .link {
+    color: #B464B4;
     text-decoration: none;
     transition: color 0.5s;
+    font-weight: 400;
 }
 
 .link:hover {
-    color: #A63FA6;
+    color: #B34DB3;
     text-decoration: underline;
     transition: color 0.5s;
 }
@@ -49,12 +51,27 @@
 
 
 /* Início - Botão */
+a.button {
+    text-decoration: none;
+}
+
 .button {
     background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
     font-weight: 500;
     padding: 10px 20px;
+}
+
+.button-primary {
+    background-color: #862D86;
+    color: #FFFFFF;
+    transition: background-color 0.5s;
+}
+
+.button-primary:hover {
+    background-color: #993399;
+    transition: background-color 0.5s;
 }
 
 .button-outline-primary {

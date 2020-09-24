@@ -22,6 +22,12 @@
   <div class="information-box-container-with-icon">
     <app-value-with-icon [icon]="icons.phone" [value]="post.user.phone"></app-value-with-icon>
   </div>
+
+  <div>
+    <a class="link" [routerLink]="getLinkViewUser(post.user.id)">
+      Visualizar Usuário
+    </a>
+  </div>
 </div>
 
 <div class="topic-container">

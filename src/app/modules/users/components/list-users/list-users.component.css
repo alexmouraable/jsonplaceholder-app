@@ -30,14 +30,6 @@
 
 .username {
     font-weight: bold;
-    text-decoration: none;
-    transition: color 0.5s;
-}
-
-.username:hover {
-    color: #A63FA6;
-    text-decoration: underline;
-    transition: color 0.5s;
 }
 
 .user-email-container {
