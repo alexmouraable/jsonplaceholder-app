@@ -1,0 +1,12 @@
+<div class="main-title-container">
+  <h1 class="main-title">
+    Álbuns
+  </h1>
+</div>
+
+<app-data-list [values]="albums" [template]="albumTemplate"
+  [buttonShowMore]="!sliceOfAlbums.isLast()" (onLoadData)="loadSliceOfAlbums()"></app-data-list>
+
+<ng-template #albumTemplate let-album>
+  <app-link-box [description]="album.title" [link]="album.id"></app-link-box>
+</ng-template>

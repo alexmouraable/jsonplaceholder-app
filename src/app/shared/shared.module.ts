@@ -13,6 +13,7 @@ import { LabelComponent } from './components/label/label.component';
 import { DataBoxComponent } from './components/data-box/data-box.component';
 import { DataListComponent } from './components/data-list/data-list.component';
 import { ValueWithIconComponent } from './components/value-with-icon/value-with-icon.component';
+import { LinkBoxComponent } from './components/link-box/link-box.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ValueWithIconComponent } from './components/value-with-icon/value-with-
     LabelComponent,
     DataBoxComponent,
     DataListComponent,
-    ValueWithIconComponent
+    ValueWithIconComponent,
+    LinkBoxComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,8 @@ import { ValueWithIconComponent } from './components/value-with-icon/value-with-
     LabelComponent,
     DataBoxComponent,
     DataListComponent,
-    ValueWithIconComponent
+    ValueWithIconComponent,
+    LinkBoxComponent
   ]
 })
 export class SharedModule { }

@@ -19,6 +19,10 @@ const routes: Routes = [
             {
                 path: 'tarefas',
                 loadChildren: './modules/todos/todos.module#TodosModule'
+            },
+            {
+                path: 'albums',
+                loadChildren: './modules/albums/albums.module#AlbumsModule'
             }
         ]
     }
