@@ -1,0 +1,13 @@
+<div class="data-list">
+  <ng-container *ngFor="let value of values">
+    <div class="data-list-item">
+      <ng-container *ngTemplateOutlet="template; context: {$implicit: value}"></ng-container>
+    </div>
+  </ng-container>
+</div>
+
+<div class="button-show-more-container" *ngIf="buttonShowMore">
+  <button class="button  button-outline-primary" (click)="onClickShowMore()">
+    Ver Mais
+  </button>
+</div>

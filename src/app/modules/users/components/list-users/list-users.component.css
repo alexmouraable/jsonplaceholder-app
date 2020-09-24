@@ -17,7 +17,6 @@
 
 .name-initials {
     color: #FFFFFF;
-    font-size: 14px;
     font-weight: bold;
 }
 
@@ -30,7 +29,6 @@
 }
 
 .username {
-    font-size: 14px;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.5s;
@@ -44,13 +42,4 @@
 
 .user-email-container {
     margin-bottom: 5px;
-}
-
-.user-container:not(:last-of-type) {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #E6E6E6;
-}
-
-.user-container:not(:first-of-type) {
-    margin-top: 20px;
 }

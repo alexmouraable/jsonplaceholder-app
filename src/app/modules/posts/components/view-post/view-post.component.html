@@ -12,21 +12,15 @@
   </div>
 
   <div class="information-box-container-with-icon">
-    <app-information-box-with-icon
-      [icon]="icons.user"
-      [information]="post.user.name"></app-information-box-with-icon>
+    <app-value-with-icon [icon]="icons.user" [value]="post.user.name"></app-value-with-icon>
   </div>
 
   <div class="information-box-container-with-icon">
-    <app-information-box-with-icon
-      [icon]="icons.email"
-      [information]="post.user.email"></app-information-box-with-icon>
+    <app-value-with-icon [icon]="icons.email" [value]="post.user.email"></app-value-with-icon>
   </div>
 
   <div class="information-box-container-with-icon">
-    <app-information-box-with-icon
-      [icon]="icons.phone"
-      [information]="post.user.phone"></app-information-box-with-icon>
+    <app-value-with-icon [icon]="icons.phone" [value]="post.user.phone"></app-value-with-icon>
   </div>
 </div>
 
@@ -37,7 +31,7 @@
     </h2>
   </div>
   <div>
-    <p class="standard-text">
+    <p>
       {{ post.title }}
     </p>
   </div>
@@ -50,7 +44,7 @@
     </h2>
   </div>
   <div>
-    <p class="standard-text">
+    <p>
       {{ post.body }}
     </p>
   </div>
@@ -63,10 +57,10 @@
     </h2>
   </div>
   <div>
-    <ng-container *ngFor="let comment of post?.comments">
-      <div class="comment-container">
-        <app-reading-box [title]="comment.email" [information]="comment.body"></app-reading-box>
-      </div>
-    </ng-container>
+    <app-data-list [values]="post.comments" [template]="commentTemplate"></app-data-list>
   </div>
 </div>
+
+<ng-template #commentTemplate let-comment>
+  <app-data-box [description]="comment.email" [value]="comment.body"></app-data-box>
+</ng-template>

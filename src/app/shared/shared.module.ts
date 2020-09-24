@@ -4,23 +4,27 @@ import { RouterModule } from '@angular/router';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { InformationBoxWithIconComponent } from './components/information-box-with-icon/information-box-with-icon.component';
-import { ReadingBoxComponent } from './components/reading-box/reading-box.component';
 import { DefaultBoxDirective } from './directives/default-box.directive';
 import { NameInitialsPipe } from './pipes/name-initials.pipe';
 import { CountBoxComponent } from './components/count-box/count-box.component';
-import { ListRecordsComponent } from './components/list-records/list-records.component';
+import { TextBoxWithLinkComponent } from './components/text-box-with-link/text-box-with-link.component';
+import { LinkBoxWithLabelComponent } from './components/link-box-with-label/link-box-with-label.component';
 import { LabelComponent } from './components/label/label.component';
+import { DataBoxComponent } from './components/data-box/data-box.component';
+import { DataListComponent } from './components/data-list/data-list.component';
+import { ValueWithIconComponent } from './components/value-with-icon/value-with-icon.component';
 
 @NgModule({
   declarations: [
-    InformationBoxWithIconComponent,
-    ReadingBoxComponent,
     DefaultBoxDirective,
     NameInitialsPipe,
     CountBoxComponent,
-    ListRecordsComponent,
-    LabelComponent
+    TextBoxWithLinkComponent,
+    LinkBoxWithLabelComponent,
+    LabelComponent,
+    DataBoxComponent,
+    DataListComponent,
+    ValueWithIconComponent
   ],
   imports: [
     CommonModule,
@@ -28,15 +32,17 @@ import { LabelComponent } from './components/label/label.component';
     RouterModule
   ],
   exports: [
-    InformationBoxWithIconComponent,
-    ReadingBoxComponent,
     DefaultBoxDirective,
     NameInitialsPipe,
     CountBoxComponent,
     FontAwesomeModule,
     RouterModule,
-    ListRecordsComponent,
-    LabelComponent
+    TextBoxWithLinkComponent,
+    LinkBoxWithLabelComponent,
+    LabelComponent,
+    DataBoxComponent,
+    DataListComponent,
+    ValueWithIconComponent
   ]
 })
 export class SharedModule { }

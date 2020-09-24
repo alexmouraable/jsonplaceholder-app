@@ -16,6 +16,7 @@ export class UserResolver implements Resolve<User> {
 
     resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<User> {
         const userId: number = activatedRouteSnapshot.params.userId;
+        
         return forkJoin({
             user: this.userService.getById(userId),
             statistics: this.userService.getStatistics(userId)

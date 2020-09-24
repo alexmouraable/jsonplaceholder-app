@@ -1,34 +1,35 @@
-<div>
-  <ng-container *ngFor="let user of users">
-    <div class="user-container">
-      <div class="user" appDefaultBox>
-        <div class="name-initials-container">
-          <span class="name-initials">
-            {{ user.name | nameInitials }}
-          </span>
+<div class="main-title-container">
+  <h1 class="main-title">Usuários</h1>
+</div>
+
+<app-data-list [values]="users" [template]="userTemplate"
+  [buttonShowMore]="!sliceOfUsers.isLast()"
+  (onLoadData)="loadSliceOfUsers()"></app-data-list>
+
+<ng-template #userTemplate let-user>
+  <div class="user-container">
+    <div class="user" appDefaultBox>
+      <div class="name-initials-container">
+        <span class="name-initials">
+          {{ user.name | nameInitials }}
+        </span>
+      </div>
+
+      <div class="user-information-container">
+        <div class="username-container">
+          <a class="username" [routerLink]="user.id">
+            {{ user.name }}
+          </a>
         </div>
-      
-        <div class="user-information-container">
-          <div class="username-container">
-            <a class="username" [routerLink]="user.id">
-              {{ user.name }}
-            </a>
-          </div>
-      
-          <div class="user-email-container">
-            <app-information-box-with-icon
-              [icon]="icons.email"
-              [information]="user.email"></app-information-box-with-icon>
-          </div>
-      
-          <div class="user-phone-container">
-            <app-information-box-with-icon
-              [icon]="icons.phone"
-              [information]="user.phone"></app-information-box-with-icon>
-          </div>
+
+        <div class="user-email-container">
+          <app-value-with-icon [icon]="icons.email" [value]="user.email"></app-value-with-icon>
+        </div>
+
+        <div class="user-phone-container">
+          <app-value-with-icon [icon]="icons.phone" [value]="user.phone"></app-value-with-icon>
         </div>
       </div>
     </div>
-  </ng-container>
-</div>
-
+  </div>
+</ng-template>

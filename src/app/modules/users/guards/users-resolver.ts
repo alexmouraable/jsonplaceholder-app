@@ -17,6 +17,7 @@ export class UsersResolver implements Resolve<Slice<User>> {
     resolve(): Observable<Slice<User>> {
         const start: number = 0;
         const end: number = 5;
+        
         return this.userService.getAll(start, end);
     }
 

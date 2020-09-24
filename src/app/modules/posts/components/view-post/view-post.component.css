@@ -13,7 +13,3 @@
 .information-box-container-with-icon:not(:last-of-type) {
     margin-bottom: 5px;
 }
-
-.comment-container:not(:last-of-type) {
-    margin-bottom: 15px;
-}

@@ -1,62 +1,72 @@
+/* Início - Reset CSS */
 * {
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     color: #404040;
 }
+/* Fim - Reset CSS */
 
+
+/* Início - Titles */
 .main-title {
     color: #862D86;
-    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .secondary-title {
     color: #404040;
-    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
 }
+/* Fim - Titles */
 
-.standard-text {
-    font-size: 14px;
-    color: #404040;
+
+/* Início - Box */
+.box {
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    padding: 15px;
+}
+/* Fim - Box */
+
+
+/* Início - Link */
+.link {
+    text-decoration: none;
+    transition: color 0.5s;
 }
 
-/* Button */
+.link:hover {
+    color: #A63FA6;
+    text-decoration: underline;
+    transition: color 0.5s;
+}
+/* Fim - Link */
+
+
+/* Início - Botão */
 .button {
+    background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-    padding: 15px 45px;
+    font-weight: 500;
+    padding: 10px 20px;
 }
 
-.button-primary {
-    color: #FFFFFF;
-    background-color: #862D86;
-    transition-duration: 0.5s;
-    transition-property: background-color;
-}
-
-.button-primary:hover {
-    background-color: #993399;
-    transition-duration: 0.5s;
-    transition-property: background-color;
-}
-
-.button-outlined-primary {
-    color: #404040;
-    background-color: transparent;
+.button-outline-primary {
     border: 1px solid #862D86;
-    transition-duration: 0.5s;
     transition-property: background-color, color;
+    transition-duration: 0.5s;
 }
 
-.button-outlined-primary:hover {
-    background-color: #862D86;
+.button-outline-primary:hover {
     color: #FFFFFF;
-    transition-duration: 0.5s;
+    background-color: #862D86;
     transition-property: background-color, color;
+    transition-duration: 0.5s;
 }
+/* Fim - Botão */

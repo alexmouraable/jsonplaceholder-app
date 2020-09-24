@@ -1,0 +1,11 @@
+.data-list-item:not(:last-of-type) {
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.button-show-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}

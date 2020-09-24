@@ -1,0 +1,12 @@
+<div class="main-title-container">
+  <h1 class="main-title">
+    Tarefas
+  </h1>
+</div>
+
+<app-data-list [values]="todos" [template]="todoTemplate"
+  [buttonShowMore]="!sliceOfTodos.isLast()" (onLoadData)="loadSliceOfTodos()"></app-data-list>
+
+<ng-template #todoTemplate let-todo>
+  <app-link-box-with-label [header]="todo.title" [label]="getLabel(todo)" [link]="todo.id"></app-link-box-with-label>
+</ng-template>

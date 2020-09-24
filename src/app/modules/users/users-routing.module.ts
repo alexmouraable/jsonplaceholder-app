@@ -3,15 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { UsersResolver } from './guards/users-resolver';
 import { UserResolver } from './guards/user-resolver';
-import { ListUsersContainerComponent } from './components/list-users-container/list-users-container.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { UserPostsResolver } from './guards/user-posts-resolver';
 import { ListUserPostsComponent } from './components/list-user-posts/list-user-posts.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: ListUsersContainerComponent,
+        component: ListUsersComponent,
         resolve: {
             sliceOfUsers: UsersResolver
         }

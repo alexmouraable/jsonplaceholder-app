@@ -12,11 +12,7 @@ import { Post } from 'src/app/data/models/post.model';
 })
 export class ViewPostComponent implements OnInit {
   post: Post;
-  readonly icons = {
-    user: faUser,
-    email: faMailBulk,
-    phone: faPhone
-  };
+  readonly icons = { user: faUser, email: faMailBulk, phone: faPhone };
 
   constructor(private activatedRoute: ActivatedRoute) { }
 

@@ -14,12 +14,16 @@ import { UserService } from 'src/app/data/services/user.service';
 })
 export class UserPostsResolver implements Resolve<{user: User, sliceOfPosts: Slice<Post>}> {
 
-    constructor(private userService: UserService, private userPostService: UserPostService) { }
+    constructor(
+        private userService: UserService,
+        private userPostService: UserPostService
+    ) { }
 
     resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<{user: User, sliceOfPosts: Slice<Post>}> {
         const userId: number = activatedRouteSnapshot.params.userId;
         const start: number = 0;
         const end: number = 5;
+        
         return forkJoin({
             user: this.userService.getById(userId),
             sliceOfPosts: this.userPostService.getAll(userId, start, end)

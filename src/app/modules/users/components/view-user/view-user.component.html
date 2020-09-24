@@ -11,9 +11,9 @@
   </div>
 
   <div class="information-container">
-    <app-reading-box title="Nome" [information]="user.name"></app-reading-box>
-    <app-reading-box title="Nome de Usuário" [information]="user.username"></app-reading-box>
-    <app-reading-box title="Website" [information]="user.website"></app-reading-box>
+    <app-data-box description="Nome" [value]="user.name"></app-data-box>
+    <app-data-box description="Nome de Usuário" [value]="user.username"></app-data-box>
+    <app-data-box description="Website" [value]="user.website"></app-data-box>
   </div>
 </div>
 <!-- </Geral> -->
@@ -25,15 +25,15 @@
   </div>
 
   <div class="information-container">
-    <app-reading-box title="Rua" [information]="user.address.street"></app-reading-box>
-    <app-reading-box title="Cidade" [information]="user.address.city"></app-reading-box>
-    <app-reading-box title="CEP" [information]="user.address.zipcode"></app-reading-box>
+    <app-data-box description="Rua" [value]="user.address.street"></app-data-box>
+    <app-data-box description="Cidade" [value]="user.address.city"></app-data-box>
+    <app-data-box description="CEP" [value]="user.address.zipcode"></app-data-box>
   </div>
 
   <div class="information-container">
-    <app-reading-box title="Complemento" [information]="user.address.suite"></app-reading-box>
-    <app-reading-box title="Latitude" [information]="user.address.geo.lat"></app-reading-box>
-    <app-reading-box title="Longitude" [information]="user.address.geo.lng"></app-reading-box>
+    <app-data-box description="Complemento" [value]="user.address.suite"></app-data-box>
+    <app-data-box description="Latitude" [value]="user.address.geo.lat"></app-data-box>
+    <app-data-box description="Longitude" [value]="user.address.geo.lng"></app-data-box>
   </div>
 </div>
 <!-- </Endereço> -->
@@ -45,8 +45,8 @@
   </div>
 
   <div class="information-container">
-    <app-reading-box title="Telefone" [information]="user.phone"></app-reading-box>
-    <app-reading-box title="E-mail" [information]="user.email"></app-reading-box>
+    <app-data-box description="Telefone" [value]="user.phone"></app-data-box>
+    <app-data-box description="E-mail" [value]="user.email"></app-data-box>
   </div>
 </div>
 <!-- </Contatos> -->
@@ -58,9 +58,9 @@
   </div>
 
   <div class="information-container">
-    <app-reading-box title="Nome" [information]="user.company.name"></app-reading-box>
-    <app-reading-box title="Bordão" [information]="user.company.catchPhrase"></app-reading-box>
-    <app-reading-box title="Finalidade" [information]="user.company.bs"></app-reading-box>
+    <app-data-box description="Nome" [value]="user.company.name"></app-data-box>
+    <app-data-box description="Bordão" [value]="user.company.catchPhrase"></app-data-box>
+    <app-data-box description="Finalidade" [value]="user.company.bs"></app-data-box>
   </div>
 </div>
 <!-- </Empresa> -->
