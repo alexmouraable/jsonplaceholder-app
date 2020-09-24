@@ -22,22 +22,11 @@
     text-transform: uppercase;
 }
 
-.button-container {
+.button-view-container {
     text-align: center;
 }
 
-.button {
-    background-color: #862D86;
+.button-view {
     border-radius: 0px;
-    color: #FFFFFF;
-    display: inline-block;
-    text-decoration: none;
-    transition: background-color 0.5s;
     width: 100%;
-    padding: 10px;
-}
-
-.button:hover {
-    background-color: #993399;
-    transition: background-color 0.5s;
 }
