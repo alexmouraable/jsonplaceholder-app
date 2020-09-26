@@ -8,11 +8,11 @@ import { Slice } from 'src/app/data/models/slice.model';
 import { PostService } from 'src/app/data/services/post.service';
 
 @Component({
-  selector: 'app-list-posts',
-  templateUrl: './list-posts.component.html',
-  styleUrls: ['./list-posts.component.css']
+  selector: 'app-list-posts-container',
+  templateUrl: './list-posts-container.component.html',
+  styleUrls: ['./list-posts-container.component.css']
 })
-export class ListPostsComponent implements OnInit {
+export class ListPostsContainerComponent implements OnInit {
   sliceOfPosts: Slice<Post>;
   posts: Post[];
 

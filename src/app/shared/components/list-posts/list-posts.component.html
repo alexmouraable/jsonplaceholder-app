@@ -1,8 +1,4 @@
-<div class="main-title-container">
-  <h1 class="main-title">Postagens</h1>
-</div>
-
-<app-data-list [values]="posts" [buttonShowMore]="!sliceOfPosts.isLast()" (onLoadData)="loadSliceOfPosts()">
+<app-data-list [values]="posts" [buttonShowMore]="buttonShowMore" (onLoadData)="onClickShowMore()">
 
   <ng-template appListItemTemplate let-post>
     <app-text-box-with-link [header]="post.title" [body]="post.body" [link]="post.id"></app-text-box-with-link>

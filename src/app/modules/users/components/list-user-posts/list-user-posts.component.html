@@ -10,11 +10,4 @@
     </h1>
 </div>
 
-<app-data-list [values]="posts" [buttonShowMore]="!sliceOfPosts.isLast()" (onLoadData)="loadSliceOfPosts()">
-
-    <ng-template appListItemTemplate let-post>
-        <app-text-box-with-link [header]="post.title" [body]="post.body"
-          [link]="getLinkViewPost(post.id)"></app-text-box-with-link>
-      </ng-template>
-
-</app-data-list>
+<app-list-posts [posts]="posts" [buttonShowMore]="!sliceOfPosts.isLast()" (onLoadData)="loadSliceOfPosts()"></app-list-posts>

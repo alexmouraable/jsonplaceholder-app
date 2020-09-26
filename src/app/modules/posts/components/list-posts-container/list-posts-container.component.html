@@ -1,0 +1,5 @@
+<div class="main-title-container">
+  <h1 class="main-title">Postagens</h1>
+</div>
+
+<app-list-posts [posts]="posts" [buttonShowMore]="!sliceOfPosts.isLast()" (onLoadData)="loadSliceOfPosts()"></app-list-posts>
