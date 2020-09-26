@@ -1,9 +1,7 @@
 <div class="data-list">
-  <ng-container *ngFor="let value of values">
-    <div class="data-list-item">
-      <ng-container *ngTemplateOutlet="template; context: {$implicit: value}"></ng-container>
-    </div>
-  </ng-container>
+  <div class="data-list-item" *ngFor="let value of values">
+    <ng-container *ngTemplateOutlet="listItemTemplate; context: {$implicit: value}"></ng-container>
+  </div>
 </div>
 
 <div class="button-show-more-container" *ngIf="buttonShowMore">

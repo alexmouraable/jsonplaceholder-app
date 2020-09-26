@@ -21,7 +21,7 @@ const routes: Routes = [
                 loadChildren: './modules/todos/todos.module#TodosModule'
             },
             {
-                path: 'albums',
+                path: 'albuns',
                 loadChildren: './modules/albums/albums.module#AlbumsModule'
             }
         ]

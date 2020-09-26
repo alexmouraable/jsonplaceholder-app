@@ -14,6 +14,7 @@ import { DataBoxComponent } from './components/data-box/data-box.component';
 import { DataListComponent } from './components/data-list/data-list.component';
 import { ValueWithIconComponent } from './components/value-with-icon/value-with-icon.component';
 import { LinkBoxComponent } from './components/link-box/link-box.component';
+import { ListItemTemplateDirective } from './directives/list-item-template.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LinkBoxComponent } from './components/link-box/link-box.component';
     DataBoxComponent,
     DataListComponent,
     ValueWithIconComponent,
-    LinkBoxComponent
+    LinkBoxComponent,
+    ListItemTemplateDirective
   ],
   imports: [
     CommonModule,
@@ -45,7 +47,8 @@ import { LinkBoxComponent } from './components/link-box/link-box.component';
     DataBoxComponent,
     DataListComponent,
     ValueWithIconComponent,
-    LinkBoxComponent
+    LinkBoxComponent,
+    ListItemTemplateDirective
   ]
 })
 export class SharedModule { }

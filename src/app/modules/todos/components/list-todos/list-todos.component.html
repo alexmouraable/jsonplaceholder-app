@@ -4,9 +4,10 @@
   </h1>
 </div>
 
-<app-data-list [values]="todos" [template]="todoTemplate"
-  [buttonShowMore]="!sliceOfTodos.isLast()" (onLoadData)="loadSliceOfTodos()"></app-data-list>
+<app-data-list [values]="todos" [buttonShowMore]="!sliceOfTodos.isLast()" (onLoadData)="loadSliceOfTodos()">
 
-<ng-template #todoTemplate let-todo>
-  <app-link-box-with-label [header]="todo.title" [label]="getLabel(todo)" [link]="todo.id"></app-link-box-with-label>
-</ng-template>
+  <ng-template appListItemTemplate let-todo>
+    <app-link-box-with-label [header]="todo.title" [label]="getLabel(todo)" [link]="todo.id"></app-link-box-with-label>
+  </ng-template>
+
+</app-data-list>

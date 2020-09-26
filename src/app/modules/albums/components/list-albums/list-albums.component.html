@@ -4,9 +4,11 @@
   </h1>
 </div>
 
-<app-data-list [values]="albums" [template]="albumTemplate"
-  [buttonShowMore]="!sliceOfAlbums.isLast()" (onLoadData)="loadSliceOfAlbums()"></app-data-list>
+<app-data-list [values]="albums" [buttonShowMore]="!sliceOfAlbums.isLast()" (onLoadData)="loadSliceOfAlbums()">
 
-<ng-template #albumTemplate let-album>
-  <app-link-box [description]="album.title" [link]="album.id"></app-link-box>
-</ng-template>
+  <ng-template appListItemTemplate let-album>
+    <app-link-box [description]="album.title" [link]="album.id"></app-link-box>
+  </ng-template>
+
+</app-data-list>
+

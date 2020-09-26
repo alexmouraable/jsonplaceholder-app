@@ -2,34 +2,34 @@
   <h1 class="main-title">Usuários</h1>
 </div>
 
-<app-data-list [values]="users" [template]="userTemplate"
-  [buttonShowMore]="!sliceOfUsers.isLast()"
-  (onLoadData)="loadSliceOfUsers()"></app-data-list>
+<app-data-list [values]="users" [buttonShowMore]="!sliceOfUsers.isLast()" (onLoadData)="loadSliceOfUsers()">
 
-<ng-template #userTemplate let-user>
-  <div class="user-container">
-    <div class="user" appDefaultBox>
-      <div class="name-initials-container">
-        <span class="name-initials">
-          {{ user.name | nameInitials }}
-        </span>
-      </div>
-
-      <div class="user-information-container">
-        <div class="username-container">
-          <a class="link  username" [routerLink]="user.id">
-            {{ user.name }}
-          </a>
+  <ng-template appListItemTemplate let-user>
+    <div class="user-container">
+      <div class="user" appDefaultBox>
+        <div class="name-initials-container">
+          <span class="name-initials">
+            {{ user.name | nameInitials }}
+          </span>
         </div>
-
-        <div class="user-email-container">
-          <app-value-with-icon [icon]="icons.email" [value]="user.email"></app-value-with-icon>
-        </div>
-
-        <div class="user-phone-container">
-          <app-value-with-icon [icon]="icons.phone" [value]="user.phone"></app-value-with-icon>
+  
+        <div class="user-information-container">
+          <div class="username-container">
+            <a class="link  username" [routerLink]="user.id">
+              {{ user.name }}
+            </a>
+          </div>
+  
+          <div class="user-email-container">
+            <app-value-with-icon [icon]="icons.email" [value]="user.email"></app-value-with-icon>
+          </div>
+  
+          <div class="user-phone-container">
+            <app-value-with-icon [icon]="icons.phone" [value]="user.phone"></app-value-with-icon>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</ng-template>
+  </ng-template>
+
+</app-data-list>
