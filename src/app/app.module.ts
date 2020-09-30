@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DefaultLayoutComponent
+    DefaultLayoutComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

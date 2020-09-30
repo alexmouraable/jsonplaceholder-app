@@ -1,0 +1,19 @@
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    max-width: 800px;
+}
+
+.image-container > img {
+    width: 100%;
+}
+
+.button-container > button {
+    padding-right: 60px;
+    padding-left: 60px;
+}

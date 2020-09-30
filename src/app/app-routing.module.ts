@@ -2,8 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
+    {
+        path: '',
+        redirectTo: '/usuarios',
+        pathMatch: 'full'
+    },
     {
         path: '',
         component: DefaultLayoutComponent,
@@ -25,6 +31,10 @@ const routes: Routes = [
                 loadChildren: './modules/albums/albums.module#AlbumsModule'
             }
         ]
+    },
+    {
+        path: '**',
+        component: PageNotFoundComponent
     }
 ];
 
