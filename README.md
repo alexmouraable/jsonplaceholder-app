@@ -26,7 +26,7 @@
 - [x] Listar Tarefas
 - [x] Listar Usuários
 - [x] Visualizar Postagem
-- [ ] Visualizar Álbum
+- [x] Visualizar Álbum
 - [x] Visualizar Tarefa
 - [x] Visualizar Usuário
 - [x] Visualizar Postagens do Usuário

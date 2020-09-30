@@ -41,6 +41,6 @@ export class UserAlbumService {
           const albums: Album[] = httpResponse.body;
           return new Slice<Album>(start, end, totalCount, albums);
         })
-      )
+      );
   }
 }

@@ -1,0 +1,30 @@
+.section:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.photos {
+    background: #F2F2F2;
+    max-width: 1050px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.photo-container {
+    flex: 1 1 150px;
+    margin: 10px;
+}
+
+.photo > img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button-show-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}

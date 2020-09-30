@@ -13,7 +13,8 @@ import { Slice } from '../models/slice.model';
 })
 export class AlbumService {
   private readonly endpoints = {
-    getAll: () => `${environment.apiRootUrl}/albums`
+    getAll: () => `${environment.apiRootUrl}/albums`,
+    getById: (albumId: number) => `${environment.apiRootUrl}/albums/${albumId}`
   };
 
   constructor(private httpClient: HttpClient) { }
@@ -34,5 +35,9 @@ export class AlbumService {
           return new Slice<Album>(start, end, totalCount, todos);
         })
       )
+  }
+
+  getById(albumId: number): Observable<Album> {
+    return this.httpClient.get<Album>(this.endpoints.getById(albumId));
   }
 }

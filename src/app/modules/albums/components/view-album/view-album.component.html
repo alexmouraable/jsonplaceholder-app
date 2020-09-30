@@ -1,0 +1,27 @@
+<app-main-title title="Visualizar Álbum"></app-main-title>
+
+<div class="section">
+    <app-secondary-title title="Usuário"></app-secondary-title>
+    <app-basic-user-information [user]="user"></app-basic-user-information>
+</div>
+
+<div class="section">
+    <app-secondary-title title="Título"></app-secondary-title>
+    <p>{{ album.title }}</p>
+</div>
+
+<div class="section">
+    <app-secondary-title title="Fotos"></app-secondary-title>
+
+    <div class="photos">
+        <div class="photo-container" *ngFor="let photo of photos">
+            <div class="photo">
+                <img [src]="photo.thumbnailUrl" [title]="photo.title" [alt]="photo.title" />
+            </div>
+        </div>
+    </div>
+
+    <div class="button-show-more-container" *ngIf="!sliceOfPhotos.isLast()">
+        <button class="button button-outline-primary" (click)="loadSliceOfPhotos()">Ver Mais</button>
+    </div>
+</div>
