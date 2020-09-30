@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { faMailBulk, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faLink, faMailBulk, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import { User } from 'src/app/data/models/user.model';
 
@@ -13,8 +13,12 @@ export class BasicUserInformationComponent {
   @Input() user: User;
   
   readonly icons = {
-    username: faUser,
+    name: faUser,
     email: faMailBulk,
     phone: faPhone
   };
+
+  getRouteViewUser(): string {
+    return `/usuarios/${this.user.id}`;
+  }
 }

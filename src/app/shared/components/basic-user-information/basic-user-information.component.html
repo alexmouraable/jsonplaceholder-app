@@ -1,11 +1,14 @@
 <div class="basic-user-information">
   <div class="user-information-container">
-    <app-value-with-icon [icon]="icons.username" [value]="user.username"></app-value-with-icon>
+    <app-value-with-icon [icon]="icons.name" [value]="user.name"></app-value-with-icon>
   </div>
   <div class="user-information-container">
     <app-value-with-icon [icon]="icons.email" [value]="user.email"></app-value-with-icon>
   </div>
   <div class="user-information-container">
     <app-value-with-icon [icon]="icons.phone" [value]="user.phone"></app-value-with-icon>
+  </div>
+  <div class="user-information-container">
+    <a class="link" [routerLink]="getRouteViewUser()">Visualizar Usuário</a>
   </div>
 <div>

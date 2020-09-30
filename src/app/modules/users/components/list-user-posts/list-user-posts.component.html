@@ -1,2 +1,2 @@
-<app-main-title title="Postagens" [additionalInformation]="user.username"></app-main-title>
+<app-main-title title="Postagens" [additionalInformation]="user.name"></app-main-title>
 <app-list-posts [posts]="posts" [buttonShowMore]="!sliceOfPosts.isLast()" (onLoadData)="loadSliceOfPosts()"></app-list-posts>
