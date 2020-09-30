@@ -1,27 +1,50 @@
-# JsonplaceholderApp
+<h1 align="center">
+    <br />
+    <img src="https://user-images.githubusercontent.com/38754458/94636237-f307c280-02aa-11eb-907a-f9e0e95c730b.png" alt="JSONPlaceholder App" width="300" />
+    <br />
+    <br />
+    JSONPlaceholder App
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+<p align="center">Uma simples aplicação que expõe informações da REST API JSONPlaceholder</p>
 
-## Development server
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<div>
+  <img src="https://user-images.githubusercontent.com/38754458/94642765-86e18a80-02bb-11eb-9bda-987716c420a7.gif" alt="demo" width="100%">
+</div>
 
-## Code scaffolding
+<hr />
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Lista de Controle de Funcionalidades
+- [x] Listar Postagens
+- [x] Listar Álbuns
+- [x] Listar Tarefas
+- [x] Listar Usuários
+- [x] Visualizar Postagem
+- [ ] Visualizar Álbum
+- [ ] Visualizar Tarefa
+- [x] Visualizar Usuário
+- [x] Visualizar Postagens do Usuário
+- [ ] Visualizar Álbuns do Usuário
+- [ ] Visualizar Tarefas do Usuário
 
-## Build
+## Recursos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- 🅰️ **Angular** — Um framework desenvolvido e mantido pelo Google para a construção de aplicações de página única
 
-## Running unit tests
+## Instalação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Utilize o comando `git clone https://github.com/alexmouraable/jsonplaceholder-app.git` para clonar o repositório
+2. Mova-se para o diretório adequado utilizando o comando `cd jsonplaceholder-app`
+3. Execute o comando `npm install` para instalar as dependências
+4. Execute o comando `ng serve` para rodar a aplicação
+5. Acesse a aplicação neste endereço `http://localhost:4200`
 
-## Running end-to-end tests
+## Licença
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+O projeto está sob a licença MIT. Consulte a página [LINCENÇA](https://opensource.org/licenses/MIT) para saber mais.
