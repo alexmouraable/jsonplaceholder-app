@@ -31,7 +31,7 @@
 - [x] Visualizar Usuário
 - [x] Visualizar Postagens do Usuário
 - [ ] Visualizar Álbuns do Usuário
-- [ ] Visualizar Tarefas do Usuário
+- [x] Visualizar Tarefas do Usuário
 
 ## Recursos
 
