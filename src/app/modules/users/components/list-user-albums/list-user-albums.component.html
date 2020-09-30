@@ -1,0 +1,2 @@
+<app-main-title title="Álbuns" [additionalInformation]="user.name"></app-main-title>
+<app-list-albums [albums]="albums" [buttonShowMore]="!sliceOfAlbums.isLast()" (onLoadData)="loadSliceOfAlbums()"></app-list-albums>

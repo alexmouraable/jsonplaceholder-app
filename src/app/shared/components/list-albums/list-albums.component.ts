@@ -15,4 +15,8 @@ export class ListAlbumsComponent {
   onClickShowMore(): void {
     this.onLoadData.emit();
   }
+
+  getRouteViewAlbum(albumId: number): string {
+    return `/albuns/${albumId}`;
+  }
 }

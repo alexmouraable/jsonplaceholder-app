@@ -1,5 +1,5 @@
 <app-data-list [values]="albums" [buttonShowMore]="buttonShowMore" (onLoadData)="onClickShowMore()">
   <ng-template appListItemTemplate let-album>
-    <app-data-box [header]="album.title" [route]="album.id"></app-data-box>
+    <app-data-box [header]="album.title" [route]="getRouteViewAlbum(album.id)"></app-data-box>
   </ng-template>
 </app-data-list>
