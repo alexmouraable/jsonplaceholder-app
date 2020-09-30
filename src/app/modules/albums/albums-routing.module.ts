@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ListAlbumsComponent } from './components/list-albums/list-albums.component';
+import { ListAlbumsContainerComponent } from './components/list-albums-container/list-albums-container.component';
 import { AlbumsResolver } from './guards/albums-resolver';
 
 const routes: Routes = [
     {
         path: '',
-        component: ListAlbumsComponent,
+        component: ListAlbumsContainerComponent,
         resolve: {
             sliceOfAlbums: AlbumsResolver
         }

@@ -17,6 +17,7 @@ import { ListTodosComponent } from './components/list-todos/list-todos.component
 import { BasicUserInformationComponent } from './components/basic-user-information/basic-user-information.component';
 import { SecondaryTitleComponent } from './components/secondary-title/secondary-title.component';
 import { MainTitleComponent } from './components/main-title/main-title.component';
+import { ListAlbumsComponent } from './components/list-albums/list-albums.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MainTitleComponent } from './components/main-title/main-title.component
     ListTodosComponent,
     BasicUserInformationComponent,
     SecondaryTitleComponent,
-    MainTitleComponent
+    MainTitleComponent,
+    ListAlbumsComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +56,8 @@ import { MainTitleComponent } from './components/main-title/main-title.component
     ListTodosComponent,
     BasicUserInformationComponent,
     SecondaryTitleComponent,
-    MainTitleComponent
+    MainTitleComponent,
+    ListAlbumsComponent
   ]
 })
 export class SharedModule { }

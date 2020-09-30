@@ -7,11 +7,11 @@ import { Slice } from 'src/app/data/models/slice.model';
 import { AlbumService } from 'src/app/data/services/album.service';
 
 @Component({
-  selector: 'app-list-albums',
-  templateUrl: './list-albums.component.html',
-  styleUrls: ['./list-albums.component.css']
+  selector: 'app-list-albums-container',
+  templateUrl: './list-albums-container.component.html',
+  styleUrls: ['./list-albums-container.component.css']
 })
-export class ListAlbumsComponent implements OnInit {
+export class ListAlbumsContainerComponent implements OnInit {
   sliceOfAlbums: Slice<Album>;
   albums: Album[];
 
