@@ -19,8 +19,4 @@ export class ViewPostComponent implements OnInit {
   ngOnInit() {
     this.post = this.activatedRoute.snapshot.data.post;
   }
-
-  getLinkViewUser(userId: number) {
-    return `../../usuarios/${userId}`;
-  }
 }

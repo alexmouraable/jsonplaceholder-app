@@ -14,6 +14,7 @@ import { ValueWithIconComponent } from './components/value-with-icon/value-with-
 import { ListItemTemplateDirective } from './directives/list-item-template.directive';
 import { ListPostsComponent } from './components/list-posts/list-posts.component';
 import { ListTodosComponent } from './components/list-todos/list-todos.component';
+import { BasicUserInformationComponent } from './components/basic-user-information/basic-user-information.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ListTodosComponent } from './components/list-todos/list-todos.component
     ValueWithIconComponent,
     ListItemTemplateDirective,
     ListPostsComponent,
-    ListTodosComponent
+    ListTodosComponent,
+    BasicUserInformationComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +47,8 @@ import { ListTodosComponent } from './components/list-todos/list-todos.component
     ValueWithIconComponent,
     ListItemTemplateDirective,
     ListPostsComponent,
-    ListTodosComponent
+    ListTodosComponent,
+    BasicUserInformationComponent
   ]
 })
 export class SharedModule { }
