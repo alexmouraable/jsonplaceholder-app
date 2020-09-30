@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { Label } from '../../models/label.model';
 
 @Component({

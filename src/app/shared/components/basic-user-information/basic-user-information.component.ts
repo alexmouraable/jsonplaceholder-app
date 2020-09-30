@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { faMailBulk, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import { User } from 'src/app/data/models/user.model';

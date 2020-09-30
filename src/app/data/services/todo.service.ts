@@ -13,7 +13,8 @@ import { Todo } from '../models/todo.model';
 })
 export class TodoService {
   private readonly endpoints = {
-    getAll: () => `${environment.apiRootUrl}/todos`
+    getAll: () => `${environment.apiRootUrl}/todos`,
+    getById: (todoId: number) => `${environment.apiRootUrl}/todos/${todoId}`
   };
 
   constructor(private httpClient: HttpClient) { }
@@ -34,5 +35,9 @@ export class TodoService {
           return new Slice<Todo>(start, end, totalCount, todos);
         })
       )
+  }
+
+  getById(todoId: number): Observable<Todo> {
+    return this.httpClient.get<Todo>(this.endpoints.getById(todoId));
   }
 }

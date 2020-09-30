@@ -16,23 +16,20 @@ import { Comment } from 'src/app/data/models/comment.model';
 })
 export class PostResolver implements Resolve<Post> {
 
-    private post: Post;
-
     constructor(private postService: PostService, private userService: UserService, private postCommentService: PostCommentService) { }
 
     resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<Post> {
         const postId: number = activatedRouteSnapshot.params.postId;
 
         return this.postService.getById(postId).pipe(
-            switchMap((foundPost: Post) => {
-                this.post = foundPost;
-                return this.userService.getById(this.post.userId).pipe(
-                    switchMap((foundUser: User) => {
-                        this.post.user = foundUser;
-                        return this.postCommentService.getAll(this.post.id).pipe(
+            switchMap((post: Post) => {
+                return this.userService.getById(post.userId).pipe(
+                    switchMap((user: User) => {
+                        post.user = user;
+                        return this.postCommentService.getAll(post.id).pipe(
                             switchMap((comments: Comment[]) => {
-                                this.post.comments = comments;
-                                return of(this.post);
+                                post.comments = comments;
+                                return of(post);
                             })
                         );
                     })

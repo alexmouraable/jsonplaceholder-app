@@ -1,0 +1,24 @@
+.main-title-container {
+    margin-bottom: 25px;
+}
+
+.secondary-title-container {
+    margin-bottom: 10px;
+}
+
+.user {
+    margin-bottom: 20px;
+}
+
+.todo-information {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -10px 0px 0px -10px;
+}
+
+.todo-information > * {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin: 10px 0px 0px 10px;
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { take } from 'rxjs/operators';
+
 import { Slice } from 'src/app/data/models/slice.model';
 import { Todo } from 'src/app/data/models/todo.model';
 import { TodoService } from 'src/app/data/services/todo.service';
@@ -11,8 +13,8 @@ import { TodoService } from 'src/app/data/services/todo.service';
   styleUrls: ['./list-todos-container.component.css']
 })
 export class ListTodosContainerComponent implements OnInit {
-  private sliceOfTodos: Slice<Todo>;
-  private todos: Todo[];
+  sliceOfTodos: Slice<Todo>;
+  todos: Todo[];
 
   constructor(
     private activatedRoute: ActivatedRoute,

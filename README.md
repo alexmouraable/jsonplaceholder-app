@@ -27,7 +27,7 @@
 - [x] Listar Usuários
 - [x] Visualizar Postagem
 - [ ] Visualizar Álbum
-- [ ] Visualizar Tarefa
+- [x] Visualizar Tarefa
 - [x] Visualizar Usuário
 - [x] Visualizar Postagens do Usuário
 - [ ] Visualizar Álbuns do Usuário

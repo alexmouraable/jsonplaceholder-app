@@ -1,0 +1,22 @@
+<div class="main-title-container">
+  <h1 class="main-title">Visualizar Tarefa</h1>
+</div>
+
+<div class="user">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">Usuário</h2>
+  </div>
+  
+  <app-basic-user-information [user]="todo.user"></app-basic-user-information>
+</div>
+
+<div class="todo">
+  <div class="secondary-title-container">
+    <h2 class="secondary-title">Tarefa</h2>
+  </div>
+  
+  <div class="todo-information">
+    <app-data-box header="Título" [body]="todo.title"></app-data-box>
+    <app-data-box header="Status" [body]="todo.completed ? 'Completa' : 'Incompleta'"></app-data-box>
+  </div>
+</div>
