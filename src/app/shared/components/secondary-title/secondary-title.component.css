@@ -1,0 +1,9 @@
+.secondary-title {
+    margin-bottom: 10px;
+}
+
+.secondary-title > .title {
+    color: #404040;
+    font-weight: bold;
+    text-transform: uppercase;
+}

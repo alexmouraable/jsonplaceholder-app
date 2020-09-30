@@ -1,9 +1,6 @@
-<div class="main-title-container">
-  <h1 class="main-title">Usuários</h1>
-</div>
+<app-main-title title="Usuários"></app-main-title>
 
 <app-data-list [values]="users" [buttonShowMore]="!sliceOfUsers.isLast()" (onLoadData)="loadSliceOfUsers()">
-
   <ng-template appListItemTemplate let-user>
     <div class="user-container">
       <div class="user" appDefaultBox>
@@ -31,5 +28,4 @@
       </div>
     </div>
   </ng-template>
-
 </app-data-list>

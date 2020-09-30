@@ -15,4 +15,8 @@ export class ListPostsComponent {
   onClickShowMore(): void {
     this.onLoadData.emit();
   }
+
+  getRouteViewPost(postId: number): string {
+    return `/postagens/${postId}`;
+  }
 }

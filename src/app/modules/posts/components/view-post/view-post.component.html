@@ -1,24 +1,12 @@
-<div class="main-title-container">
-  <h1 class="main-title">
-    Visualizar Postagem
-  </h1>
-</div>
+<app-main-title title="Visualizar Postagem"></app-main-title>
 
 <div class="topic-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">
-      Usuário
-    </h2>
-  </div>
+  <app-secondary-title title="Usuário"></app-secondary-title>
   <app-basic-user-information [user]="post.user"></app-basic-user-information>
 </div>
 
 <div class="topic-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">
-      Título
-    </h2>
-  </div>
+  <app-secondary-title title="Título"></app-secondary-title>
   <div>
     <p>
       {{ post.title }}
@@ -27,11 +15,7 @@
 </div>
 
 <div class="topic-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">
-      Conteúdo
-    </h2>
-  </div>
+  <app-secondary-title title="Conteúdo"></app-secondary-title>
   <div>
     <p>
       {{ post.body }}
@@ -40,11 +24,7 @@
 </div>
 
 <div class="topic-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">
-      Comentários
-    </h2>
-  </div>
+  <app-secondary-title title="Comentários"></app-secondary-title>
   <div>
     <app-data-list [values]="post.comments">
       <ng-template appListItemTemplate let-comment>

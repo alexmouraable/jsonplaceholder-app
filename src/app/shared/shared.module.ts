@@ -15,6 +15,8 @@ import { ListItemTemplateDirective } from './directives/list-item-template.direc
 import { ListPostsComponent } from './components/list-posts/list-posts.component';
 import { ListTodosComponent } from './components/list-todos/list-todos.component';
 import { BasicUserInformationComponent } from './components/basic-user-information/basic-user-information.component';
+import { SecondaryTitleComponent } from './components/secondary-title/secondary-title.component';
+import { MainTitleComponent } from './components/main-title/main-title.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BasicUserInformationComponent } from './components/basic-user-informati
     ListItemTemplateDirective,
     ListPostsComponent,
     ListTodosComponent,
-    BasicUserInformationComponent
+    BasicUserInformationComponent,
+    SecondaryTitleComponent,
+    MainTitleComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +52,9 @@ import { BasicUserInformationComponent } from './components/basic-user-informati
     ListItemTemplateDirective,
     ListPostsComponent,
     ListTodosComponent,
-    BasicUserInformationComponent
+    BasicUserInformationComponent,
+    SecondaryTitleComponent,
+    MainTitleComponent
   ]
 })
 export class SharedModule { }

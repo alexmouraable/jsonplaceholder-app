@@ -1,3 +1,2 @@
-<p>
-  list-user-todos works!
-</p>
+<app-main-title title="Tarefas" [additionalInformation]="user.username"></app-main-title>
+<app-list-todos [todos]="todos" [buttonShowMore]="!sliceOfTodos.isLast()" (onLoadData)="loadSliceOfTodos()"></app-list-todos>

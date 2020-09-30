@@ -1,0 +1,13 @@
+.main-title {
+    margin-bottom: 25px;
+}
+
+.main-title > .title {
+    color: #862D86;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-title > .additional-information {
+    color: #999;
+}

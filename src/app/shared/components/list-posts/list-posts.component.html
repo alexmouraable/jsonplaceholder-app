@@ -1,5 +1,5 @@
 <app-data-list [values]="posts" [buttonShowMore]="buttonShowMore" (onLoadData)="onClickShowMore()">
   <ng-template appListItemTemplate let-post>
-    <app-data-box [header]="post.title" [body]="post.body" [route]="post.id"></app-data-box>
+    <app-data-box [header]="post.title" [body]="post.body" [route]="getRouteViewPost(post.id)"></app-data-box>
   </ng-template>
 </app-data-list>

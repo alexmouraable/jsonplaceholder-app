@@ -1,11 +1,3 @@
-.main-title-container {
-    margin-bottom: 25px;
-}
-
-.secondary-title-container {
-    margin-bottom: 10px;
-}
-
 .information-container {
     display: flex;
     justify-content: space-between;

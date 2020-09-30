@@ -7,6 +7,8 @@ import { ViewUserComponent } from './components/view-user/view-user.component';
 import { UserPostsResolver } from './guards/user-posts-resolver';
 import { ListUserPostsComponent } from './components/list-user-posts/list-user-posts.component';
 import { ListUsersComponent } from './components/list-users/list-users.component';
+import { ListUserTodosComponent } from './components/list-user-todos/list-user-todos.component';
+import { UserTodosResolver } from './guards/user-todos-resolver';
 
 const routes: Routes = [
     {
@@ -28,6 +30,13 @@ const routes: Routes = [
         component: ListUserPostsComponent,
         resolve: {
             userAndSliceOfPosts: UserPostsResolver
+        }
+    },
+    {
+        path: ':userId/tarefas',
+        component: ListUserTodosComponent,
+        resolve: {
+            userAndSliceOfTodos: UserTodosResolver
         }
     }
 ];

@@ -24,4 +24,8 @@ export class ListTodosComponent {
   onClickShowMore(): void {
     this.onLoadData.emit();
   }
+
+  getRouteViewTodo(todoId: number): string {
+    return `/tarefas/${todoId}`;
+  }
 }

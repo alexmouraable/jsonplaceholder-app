@@ -1,14 +1,10 @@
 <!-- <Título Principal> -->
-<div class="main-title-container">
-  <h1 class="main-title">Visualizar Usuário</h1>
-</div>
+<app-main-title title="Visualizar Usuário"></app-main-title>
 <!-- </Título Principal> -->
 
 <!-- <Geral> -->
 <div class="section-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">Geral</h2>
-  </div>
+  <app-secondary-title title="Geral"></app-secondary-title>
 
   <div class="information-container">
     <app-data-box header="Nome" [body]="user.name"></app-data-box>
@@ -20,9 +16,7 @@
 
 <!-- <Endereço> -->
 <div class="section-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">Endereço</h2>
-  </div>
+  <app-secondary-title title="Endereço"></app-secondary-title>
 
   <div class="information-container">
     <app-data-box header="Rua" [body]="user.address.street"></app-data-box>
@@ -40,9 +34,7 @@
 
 <!-- <Contatos> -->
 <div class="section-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">Contatos</h2>
-  </div>
+  <app-secondary-title title="Contatos"></app-secondary-title>
 
   <div class="information-container">
     <app-data-box header="Telefone" [body]="user.phone"></app-data-box>
@@ -53,9 +45,7 @@
 
 <!-- <Empresa> -->
 <div class="section-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">Empresa</h2>
-  </div>
+  <app-secondary-title title="Empresa"></app-secondary-title>
 
   <div class="information-container">
     <app-data-box header="Nome" [body]="user.company.name"></app-data-box>
@@ -67,9 +57,7 @@
 
 <!-- <Estatísticas> -->
 <div class="section-container">
-  <div class="secondary-title-container">
-    <h2 class="secondary-title">Estatísticas</h2>
-  </div>
+  <app-secondary-title title="Estatísticas"></app-secondary-title>
 
   <div class="information-container">
     <app-count-box description="Postagens" [count]="user.statistics.numberOfPosts" [icon]="icons.posts"
