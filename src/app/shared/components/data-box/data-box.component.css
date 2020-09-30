@@ -1,7 +1,20 @@
-.description-container {
-    margin-bottom: 10px;
+.data-box {
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    padding: 15px;
 }
 
-.description {
+.data-box > *:not(:first-child):not(.label-container) {
+    margin-top: 10px;
+}
+
+.data-box > .header,
+.data-box > .header > a {
     font-weight: bold;
+}
+
+.data-box > .label-container {
+    position: absolute;
+    top: -10px;
+    right: -10px;
 }

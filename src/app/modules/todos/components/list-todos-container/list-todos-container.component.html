@@ -1,0 +1,7 @@
+<div class="main-title-container">
+  <h1 class="main-title">
+    Tarefas
+  </h1>
+</div>
+
+<app-list-todos [todos]="todos" [buttonShowMore]="!sliceOfTodos.isLast()" (onLoadData)="loadSliceOfTodos()"></app-list-todos>

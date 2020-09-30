@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Label } from '../../models/label.model';
 
 @Component({
   selector: 'app-data-box',
@@ -6,6 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./data-box.component.css']
 })
 export class DataBoxComponent {
-  @Input() description: string;
-  @Input() value: any;
+  @Input() header: string;
+  @Input() body: string | number;
+  @Input() route: string;
+  @Input() label: Label;
 }

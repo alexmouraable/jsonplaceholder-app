@@ -7,30 +7,26 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DefaultBoxDirective } from './directives/default-box.directive';
 import { NameInitialsPipe } from './pipes/name-initials.pipe';
 import { CountBoxComponent } from './components/count-box/count-box.component';
-import { TextBoxWithLinkComponent } from './components/text-box-with-link/text-box-with-link.component';
-import { LinkBoxWithLabelComponent } from './components/link-box-with-label/link-box-with-label.component';
 import { LabelComponent } from './components/label/label.component';
 import { DataBoxComponent } from './components/data-box/data-box.component';
 import { DataListComponent } from './components/data-list/data-list.component';
 import { ValueWithIconComponent } from './components/value-with-icon/value-with-icon.component';
-import { LinkBoxComponent } from './components/link-box/link-box.component';
 import { ListItemTemplateDirective } from './directives/list-item-template.directive';
 import { ListPostsComponent } from './components/list-posts/list-posts.component';
+import { ListTodosComponent } from './components/list-todos/list-todos.component';
 
 @NgModule({
   declarations: [
     DefaultBoxDirective,
     NameInitialsPipe,
     CountBoxComponent,
-    TextBoxWithLinkComponent,
-    LinkBoxWithLabelComponent,
     LabelComponent,
     DataBoxComponent,
     DataListComponent,
     ValueWithIconComponent,
-    LinkBoxComponent,
     ListItemTemplateDirective,
-    ListPostsComponent
+    ListPostsComponent,
+    ListTodosComponent
   ],
   imports: [
     CommonModule,
@@ -43,15 +39,13 @@ import { ListPostsComponent } from './components/list-posts/list-posts.component
     CountBoxComponent,
     FontAwesomeModule,
     RouterModule,
-    TextBoxWithLinkComponent,
-    LinkBoxWithLabelComponent,
     LabelComponent,
     DataBoxComponent,
     DataListComponent,
     ValueWithIconComponent,
-    LinkBoxComponent,
     ListItemTemplateDirective,
-    ListPostsComponent
+    ListPostsComponent,
+    ListTodosComponent
   ]
 })
 export class SharedModule { }

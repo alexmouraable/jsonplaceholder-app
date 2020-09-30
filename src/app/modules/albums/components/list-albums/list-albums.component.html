@@ -5,10 +5,8 @@
 </div>
 
 <app-data-list [values]="albums" [buttonShowMore]="!sliceOfAlbums.isLast()" (onLoadData)="loadSliceOfAlbums()">
-
   <ng-template appListItemTemplate let-album>
-    <app-link-box [description]="album.title" [link]="album.id"></app-link-box>
+    <app-data-box [header]="album.title" [route]="album.id"></app-data-box>
   </ng-template>
-
 </app-data-list>
 

@@ -1,8 +1,17 @@
-<div class="box">
-  <div class="description-container">
-    <span class="description">{{ description }}</span>
+<div class="data-box" [style.position]="label && 'relative'">
+  <div class="header" *ngIf="header">
+    <a class="link" *ngIf="route; else headerWithoutRoute" [routerLink]="route">{{ header }}</a>
+    
+    <ng-template #headerWithoutRoute>
+      <span>{{ header }}</span>
+    </ng-template>
   </div>
-  <div>
-    {{ value }}
+
+  <div class="body" *ngIf="body">
+    <span>{{ body }}</span>
+  </div>
+
+  <div class="label-container" *ngIf="label">
+    <app-label [label]="label"></app-label>
   </div>
 </div>

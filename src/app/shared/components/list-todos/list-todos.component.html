@@ -1,0 +1,5 @@
+<app-data-list [values]="todos" [buttonShowMore]="buttonShowMore" (onLoadData)="onClickShowMore()">
+  <ng-template appListItemTemplate let-todo>
+    <app-data-box [header]="todo.title" [label]="getLabel(todo)" [route]="todo.id"></app-data-box>
+  </ng-template>
+</app-data-list>

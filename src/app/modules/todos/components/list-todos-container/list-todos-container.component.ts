@@ -1,25 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { take } from 'rxjs/operators';
-
 import { Slice } from 'src/app/data/models/slice.model';
 import { Todo } from 'src/app/data/models/todo.model';
 import { TodoService } from 'src/app/data/services/todo.service';
-import { Label } from 'src/app/shared/models/label.model';
 
 @Component({
-  selector: 'app-list-todos',
-  templateUrl: './list-todos.component.html',
-  styleUrls: ['./list-todos.component.css']
+  selector: 'app-list-todos-container',
+  templateUrl: './list-todos-container.component.html',
+  styleUrls: ['./list-todos-container.component.css']
 })
-export class ListTodosComponent implements OnInit {
-  sliceOfTodos: Slice<Todo>;
-  todos: Todo[];
+export class ListTodosContainerComponent implements OnInit {
+  private sliceOfTodos: Slice<Todo>;
+  private todos: Todo[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private todoService: TodoService  
+    private todoService: TodoService
   ) { }
 
   ngOnInit() {
@@ -35,13 +32,5 @@ export class ListTodosComponent implements OnInit {
       this.sliceOfTodos = sliceOfTodos;
       this.todos = this.todos.concat(this.sliceOfTodos.values);
     });
-  }
-
-  getLabel(todo: Todo): Label {
-    return {
-      backgroundColor: todo.completed ? '#1b8f06' : '#f70505',
-      description: todo.completed ? 'Completa' : 'Incompleta',
-      descriptionColor: '#FFF'
-    }
   }
 }

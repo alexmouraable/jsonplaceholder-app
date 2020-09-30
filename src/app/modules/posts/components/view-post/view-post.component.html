@@ -64,11 +64,9 @@
   </div>
   <div>
     <app-data-list [values]="post.comments">
-
       <ng-template appListItemTemplate let-comment>
-        <app-data-box [description]="comment.email" [value]="comment.body"></app-data-box>
+        <app-data-box [header]="comment.email" [body]="comment.body"></app-data-box>
       </ng-template>
-      
     </app-data-list>
   </div>
 </div>

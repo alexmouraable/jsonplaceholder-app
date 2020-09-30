@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListTodosComponent } from './components/list-todos/list-todos.component';
+
+import { ListTodosContainerComponent } from './components/list-todos-container/list-todos-container.component';
 import { TodosResolver } from './guards/todos-resolver';
 
 const routes: Routes = [
     {
         path: '',
-        component: ListTodosComponent,
+        component: ListTodosContainerComponent,
         resolve: {
             sliceOfTodos: TodosResolver
         }
