@@ -6,7 +6,7 @@
     JSONPlaceholder App
 </h1>
 
-<p align="center">Uma simples aplicação que expõe informações da REST API JSONPlaceholder</p>
+<p align="center">JSONPlaceholder App é uma aplicação que expõe os dados da REST API JSONPlaceholder</p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -15,29 +15,16 @@
 </p>
 
 <div>
-  <img src="https://user-images.githubusercontent.com/38754458/94642765-86e18a80-02bb-11eb-9bda-987716c420a7.gif" alt="demo" width="100%">
+  <img src="https://user-images.githubusercontent.com/38754458/94753377-6e797a80-0364-11eb-8f54-62b3b4850970.gif" alt="demo" width="100%">
 </div>
 
 <hr />
 
-## Lista de Controle de Funcionalidades
-- [x] Listar Postagens
-- [x] Listar Álbuns
-- [x] Listar Tarefas
-- [x] Listar Usuários
-- [x] Visualizar Postagem
-- [x] Visualizar Álbum
-- [x] Visualizar Tarefa
-- [x] Visualizar Usuário
-- [x] Visualizar Postagens do Usuário
-- [x] Visualizar Álbuns do Usuário
-- [x] Visualizar Tarefas do Usuário
+## 🚀 Tecnologias
 
-## Recursos
+- [Angular](https://angular.io/)
 
-- 🅰️ **Angular** — Um framework desenvolvido e mantido pelo Google para a construção de aplicações de página única
-
-## Instalação
+## 🔧 Instalação
 
 1. Utilize o comando `git clone https://github.com/alexmouraable/jsonplaceholder-app.git` para clonar o repositório
 2. Mova-se para o diretório adequado utilizando o comando `cd jsonplaceholder-app`
@@ -45,6 +32,6 @@
 4. Execute o comando `ng serve` para rodar a aplicação
 5. Acesse a aplicação neste endereço `http://localhost:4200`
 
-## Licença
+## 📝 Licença
 
-O projeto está sob a licença MIT. Consulte a página [LINCENÇA](https://opensource.org/licenses/MIT) para saber mais.
+O projeto está sob a licença MIT. Clique [aqui](https://opensource.org/licenses/MIT) para saber mais.
