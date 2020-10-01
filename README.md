@@ -20,18 +20,21 @@
 
 <hr />
 
-## 🚀 Tecnologias
+## Demonstração
 
-- [Angular](https://angular.io/)
+Clique [aqui]() para acessar a aplicação.
 
-## 🔧 Instalação
+## Tecnologias
 
-1. Utilize o comando `git clone https://github.com/alexmouraable/jsonplaceholder-app.git` para clonar o repositório
-2. Mova-se para o diretório adequado utilizando o comando `cd jsonplaceholder-app`
-3. Execute o comando `npm install` para instalar as dependências
-4. Execute o comando `ng serve` para rodar a aplicação
-5. Acesse a aplicação neste endereço `http://localhost:4200`
+- 🅰️ [Angular](https://angular.io/) — Um framework que detém como finalidade proporcionar a construção de aplicações de página única.
 
-## 📝 Licença
+## Instalação
 
-O projeto está sob a licença MIT. Clique [aqui](https://opensource.org/licenses/MIT) para saber mais.
+1. Para realizar a instalação da aplicação é necessário certificar-se de possuir o Node.js, NPM, Angular e Angular CLI.
+2. Em seguida, é necessário clonar o repositório.
+3. Na raíz da aplicação é necessário executar `npm install` para instalar as suas dependências.
+4. Ótimo! Agora é só executar `ng serve` e acessar a aplicação no endereço a seguir: http://localhost:4200.
+
+## Licença
+
+A presente aplicação está sob a [Licença MIT](https://opensource.org/licenses/MIT).
