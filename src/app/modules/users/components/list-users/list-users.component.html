@@ -3,7 +3,7 @@
 <app-data-list [values]="users" [buttonShowMore]="!sliceOfUsers.isLast()" (onLoadData)="loadSliceOfUsers()">
   <ng-template appListItemTemplate let-user>
     <div class="user-container">
-      <div class="user" appDefaultBox>
+      <div class="user">
         <div class="name-initials-container">
           <span class="name-initials">
             {{ user.name | nameInitials }}

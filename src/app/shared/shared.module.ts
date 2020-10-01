@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { DefaultBoxDirective } from './directives/default-box.directive';
 import { NameInitialsPipe } from './pipes/name-initials.pipe';
 import { CountBoxComponent } from './components/count-box/count-box.component';
 import { LabelComponent } from './components/label/label.component';
@@ -21,7 +20,6 @@ import { ListAlbumsComponent } from './components/list-albums/list-albums.compon
 
 @NgModule({
   declarations: [
-    DefaultBoxDirective,
     NameInitialsPipe,
     CountBoxComponent,
     LabelComponent,
@@ -42,7 +40,6 @@ import { ListAlbumsComponent } from './components/list-albums/list-albums.compon
     RouterModule
   ],
   exports: [
-    DefaultBoxDirective,
     NameInitialsPipe,
     CountBoxComponent,
     FontAwesomeModule,
