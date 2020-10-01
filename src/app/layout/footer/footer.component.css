@@ -3,11 +3,11 @@ footer {
     background-color: #404040;
     display: flex;
     justify-content: space-between;
-    padding: 10px 95px;
 }
 
 .container-tool-images {
     display: flex;
+    margin-left: 10px;
 }
 
 .tool-image-container:not(:last-of-type) {

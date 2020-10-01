@@ -9,6 +9,16 @@
 }
 /* Fim - Reset CSS */
 
+.container {
+    width: 100%;
+    padding: 15px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 15px 95px;
+    }
+}
 
 /* Início - Box */
 .box {

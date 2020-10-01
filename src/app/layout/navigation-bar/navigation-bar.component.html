@@ -1,0 +1,38 @@
+<header class="container  navigation-bar">
+
+    <div class="logo-container">
+        <a routerLink="/">
+            <img [src]="getLogoUrl()" title="Logomarca do JSONPlaceholder App" alt="Logomarca do JSONPlaceholder App" />
+        </a>
+    </div>
+
+    <div class="navigation-container" [style.display]="isVisible ? 'block' : 'none'">
+        <nav>
+            <ul class="navigation-unordered-list">
+                <li class="navigation-unordered-list-item">
+                    <a class="navigation-button-link" [routerLinkActive]="classNameRouterLinkActive" routerLink="/usuarios">Usuários</a>
+                </li>
+                <li class="navigation-unordered-list-item">
+                    <a class="navigation-button-link" [routerLinkActive]="classNameRouterLinkActive" routerLink="/postagens">Postagens</a>
+                </li>
+                <li class="navigation-unordered-list-item">
+                    <a class="navigation-button-link" [routerLinkActive]="classNameRouterLinkActive" routerLink="/albuns">Álbuns</a>
+                </li>
+                <li class="navigation-unordered-list-item">
+                    <a class="navigation-button-link" [routerLinkActive]="classNameRouterLinkActive" routerLink="/tarefas">Tarefas</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="highlighted-button-container" *ngIf="isBigDevice">
+        <button class="button  button-primary">JSONPlaceholder</button>
+    </div>
+
+    <div *ngIf="!isBigDevice">
+        <button class="toggle-navigation-button" (click)="openNavigation()">
+            <fa-icon [icon]="toggleNavigationButtonIcon" size="2x"></fa-icon>
+        </button>
+    </div>
+
+</header>
