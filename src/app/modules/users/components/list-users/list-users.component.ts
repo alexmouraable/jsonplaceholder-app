@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { faMailBulk, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { take } from 'rxjs/operators';

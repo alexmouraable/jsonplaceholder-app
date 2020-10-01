@@ -1,4 +1,4 @@
-/* Início - Reset CSS */
+/* Reset CSS */
 * {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -7,8 +7,8 @@
     box-sizing: border-box;
     color: #404040;
 }
-/* Fim - Reset CSS */
 
+/* Container */
 .container {
     width: 100%;
     padding: 15px;
@@ -19,15 +19,6 @@
         padding: 15px 95px;
     }
 }
-
-/* Início - Box */
-.box {
-    background-color: #F2F2F2;
-    border-radius: 5px;
-    padding: 15px;
-}
-/* Fim - Box */
-
 
 /* Início - Link */
 .link {
@@ -42,10 +33,8 @@
     text-decoration: underline;
     transition: color 0.5s;
 }
-/* Fim - Link */
 
-
-/* Início - Botão */
+/* Botão */
 a.button {
     text-decoration: none;
 }
@@ -93,4 +82,3 @@ a.button {
     transition-property: background-color, color;
     transition-duration: 0.5s;
 }
-/* Fim - Botão */

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
+
 import { forkJoin, Observable } from 'rxjs';
+
 import { Slice } from 'src/app/data/models/slice.model';
 import { Todo } from 'src/app/data/models/todo.model';
 import { User } from 'src/app/data/models/user.model';

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { take } from 'rxjs/operators';
+
 import { Album } from 'src/app/data/models/album.model';
 import { Slice } from 'src/app/data/models/slice.model';
 import { User } from 'src/app/data/models/user.model';
