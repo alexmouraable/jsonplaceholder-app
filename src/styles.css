@@ -60,6 +60,17 @@ a.button {
     transition: background-color 0.5s;
 }
 
+.button-secondary {
+    background-color: #999999;
+    color: #FFF;
+    transition: background-color 0.5s;
+}
+
+.button-secondary:hover {
+    background-color:#A6A6A6;
+    transition: background-color 0.5s;
+}
+
 .button-outline-primary {
     border: 1px solid #862D86;
     transition-property: background-color, color;
